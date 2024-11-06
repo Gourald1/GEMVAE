@@ -85,7 +85,7 @@ class GATE():
         con_loss1 = self.con_loss(H, H2, batch_size=0)
         con_loss2 = self.con_loss(H1, H, batch_size=0)
         con_loss=con_loss+con_loss1+con_loss2
-        self.c_loss = con_loss/3
+        self.c_loss = con_loss
         if self.kl_loss != 0:
             #Latent space using a varational auto encoder
             mu = self.fc_mu(H)
